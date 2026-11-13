@@ -24,4 +24,4 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Run formatter
-        run: mvn spotless:check
+        run: mvn -B -ntp spotless:check
