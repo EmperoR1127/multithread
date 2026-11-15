@@ -12,7 +12,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Run tests with Maven
-        run: mvn -B test --file pom.xml
+        run: ./mvnw -B test --file pom.xml
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -24,4 +24,4 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Run formatter
-        run: mvn -B -ntp spotless:check
+        run: ./mvnw -B -ntp spotless:check
